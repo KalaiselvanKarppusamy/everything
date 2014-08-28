@@ -1,0 +1,14 @@
+{
+  "name" : "integration",
+  "description" : "Skeleton Application for ZF2",
+  "require" : {
+    "php" : ">=5.3.3",
+    "zendframework/zendframework" : "=2.3.1",
+    "phpunit/phpunit" : "=4.2.2",
+    "squizlabs/php_codesniffer" : "=1.5.4",
+    "behat/behat" : "2.*@stable"
+  },
+  "keywords" : [ "framework", "zf2" ],
+  "license" : "BSD-3-Clause",
+  "homepage" : "http://framework.zend.com/"
+}

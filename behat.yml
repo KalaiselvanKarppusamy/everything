@@ -1,0 +1,9 @@
+# behat.yml
+default:
+    paths:
+        features: tests/features
+        bootstrap: tests/features/bootstrap
+    formatter:
+        name:       junit
+        parameters:
+            output_path: build/logs/tests

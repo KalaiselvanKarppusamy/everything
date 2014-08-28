@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="integration" default="build" basedir=".">
+	<target name="build" depends="clean,phpunit,phpcs,behat" />
+	
+	 <target name="clean">
+	  <!-- Clean up -->
+	  <delete dir="${basedir}/build/api"/>
+	  <delete dir="${basedir}/build/code-browser"/>
+	  <delete dir="${basedir}/build/coverage"/>
+	  <delete dir="${basedir}/build/logs"/>
+	  <delete dir="${basedir}/build/pdepend"/>
+
+	  <!-- Create build directories -->
+	  <mkdir dir="${basedir}/build/api"/>
+	  <mkdir dir="${basedir}/build/code-browser"/>
+	  <mkdir dir="${basedir}/build/coverage"/>
+	  <mkdir dir="${basedir}/build/logs"/>
+	  <mkdir dir="${basedir}/build/pdepend"/>
+	  
+	  <!-- Change permission settings of executables -->
+	  <chmod file="${basedir}/vendor/bin/phpunit" perm="777" />	 
+	  <chmod file="${basedir}/vendor/phpunit/phpunit/phpunit" perm="777" />
+	  <chmod file="${basedir}/vendor/bin/phpcs" perm="777" />
+	  <chmod file="${basedir}/vendor/squizlabs/php_codesniffer/scripts/phpcs" perm="777" />
+	  
+	  <chmod file="${basedir}/vendor/bin/behat" perm="777" />
+	  <chmod file="${basedir}/vendor/behat/behat/bin/behat" perm="777" />
+	  <chmod file="${basedir}/build" perm="777" />
+	 </target>
+	<!-- <target name="phpunit"  depends="AlbumTest,ChecklistTest" > -->
+	
+	<!-- added -->
+	<target name="phpunit">
+		<apply executable="${basedir}/vendor/bin/phpunit" parallel="false">
+			<fileset dir="${basedir}/module" >
+				<include name="**/tests/phpunit.xml" />
+			</fileset>
+			<arg value="--configuration" />			
+		</apply>
+	</target>
+	
+	<target name="phpcs">
+		<apply executable="${basedir}/vendor/bin/phpcs" parallel="false">
+			<fileset dir="${basedir}/module" >
+				<include name="**/*.php" />
+				<exclude name="**/test/**" />
+			</fileset>
+			<arg value="--standard=zend" />		
+			<arg value="--report=checkstyle" />			
+			<arg value="--report-file=${basedir}/build/logs/cs.xml" />
+		</apply>		
+	</target>
+	
+	<target name="behat">
+		<echo message="Running behat test" />
+        <apply executable="${basedir}/vendor/bin/behat" parallel="false">
+			<fileset dir="${basedir}/tests" >
+				<include name="features/**" />
+			</fileset>
+		</apply>
+    </target>	
+	
+	
+	<!-- <target name="AlbumTest">		
+		<exec executable="${basedir}/vendor/bin/phpunit" failonerror="false" dir="${basedir}/module/Album/tests">			
+		</exec>			
+	</target>
+	<target name="ChecklistTest">		
+		<exec executable="${basedir}/vendor/bin/phpunit" failonerror="true" dir="${basedir}/module/Checklist/tests">			
+		</exec>			
+	</target> 
+	<target name="phpunit">
+		<exec executable="phpunit" failonerror="false" dir="${basedir}/tests">			
+		</exec>	
+	</target>-->			
+</project>

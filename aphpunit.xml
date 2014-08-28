@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="module/Album/tests/bootstrap.php" backupGlobals="false" backupStaticAttributes="false" strict="true" verbose="true">
+    <testsuites>
+        <!-- <testsuite name="Album">
+            <directory>module/Album/tests</directory>
+        </testsuite>
+        <testsuite name="Checklist">
+            <directory>module/Checklist/tests</directory>
+        </testsuite> -->
+        <testsuite name="tests">
+        	<directory>.</directory>
+        </testsuite>
+    </testsuites>    
+   	<logging>	
+		<log type="junit" target="build/logs/junit.xml"/>
+	</logging>	
+</phpunit>
