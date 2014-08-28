@@ -15,7 +15,7 @@ class TaskControllerTest extends AbstractHttpControllerTestCase
         $this->setApplicationConfig(
         		//include '/vagrant/zend/workspace2/integration/config/application.config.php'
 	       //include '/var/lib/jenkins/jobs/integration/workspace/config/application.config.php'
-		   include '/var/lib/jenkins/jobs/testing-everything-new/workspace/config/application.config.php'
+		   include '/var/lib/jenkins/jobs/everything/workspace/config/application.config.php'
         );
         parent::setUp();        
     }
