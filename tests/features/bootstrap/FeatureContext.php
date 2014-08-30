@@ -7,7 +7,7 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
-   require_once '/vagrant/zend/workspace/everything/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php';
+   require_once '/var/lib/jenkins/jobs/everything/workspace/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php';
    require_once 'Calculator.php';
 
 /**
