@@ -7,8 +7,7 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
-   //require_once 'PHPUnit/Autoload.php';
-   //require_once 'PHPUnit/Framework/Assert/Functions.php';
+   require_once '/var/lib/jenkins/jobs/everything/workspace/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php';
    require_once 'Calculator.php';
 
 /**
@@ -50,58 +49,10 @@ class FeatureContext extends BehatContext
      */
     public function theResultShouldBeOnTheScreen($argument1)
     {
-        //assertEquals($argument1, $this->calculator->result());
-		if ( (int) $argument1 !== $this->calculator->result())
-		{
-			throw new Exception("Actual output is:\n" . $this->calculator->result());
-		}
-    }
-
-    /**
-     * @Given /^I am creating a database and table$/
-     */
-    public function iAmCreatingADatabaseAndTable()
-    {
-	//../../data/create_datebase_table
-    }
-
-    /**
-     * @When /^I inserting value into table$/
-     */
-    public function iInsertingValueIntoTable()
-    {
-	//../../data/insert_value
-    }
-
-    /**
-     * @Then /^I should get all inserted value$/
-     */
-    public function iShouldGetAllInsertedValue()
-    {
-	//../../data/select_value
-    }
-	
-	/**
-     * @Given /^I am creating something wrong$/
-     */
-    public function iAmCreatingSomethingWrong()
-    {
-		
-    }
-
-    /**
-     * @When /^I type something wrong$/
-     */
-    public function iTypeSomethingWrong()
-    {
-		
-    }
-
-    /**
-     * @Then /^I should get failed result$/
-     */
-    public function iShouldGetFailedResult()
-    {
-		
+        assertEquals($argument1, $this->calculator->result());
+	//	if ((int) $argument1 !== $this->calculator->result())
+	//	{
+	//		throw new Exception("Actual output is:\n" . $this->calculator->result());
+	//	}
     }
 }

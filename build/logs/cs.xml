@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="1.5.4">
+<file name="/vagrant/zend/workspace/everything/module/Checklist/tests/bootstrap.php">
+ <error line="5" column="1" severity="warning" message="Line exceeds 80 characters; contains 88 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="6" column="1" severity="warning" message="Line exceeds 80 characters; contains 86 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="36" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+ <error line="66" column="107" severity="warning" message="Line exceeds 80 characters; contains 106 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="67" column="96" severity="warning" message="Line exceeds 80 characters; contains 95 characters" source="Generic.Files.LineLength.TooLong"/>
+ <error line="105" column="1" severity="warning" message="Line exceeds 80 characters; contains 81 characters" source="Generic.Files.LineLength.TooLong"/>
+</file>
+</checkstyle>

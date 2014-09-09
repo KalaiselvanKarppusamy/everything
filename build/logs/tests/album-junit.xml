@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Album Test Suite" tests="3" assertions="7" failures="0" errors="0" time="2.639686">
+    <testsuite name="AlbumTest\Controller\IndexControllerTest" file="/vagrant/zend/workspace/everything/module/Album/tests/AlbumTest/Controller/IndexControllerTest.php" tests="2" assertions="6" failures="0" errors="0" time="2.623525">
+      <testcase name="testIndexActionCanBeAccessed" class="AlbumTest\Controller\IndexControllerTest" file="/vagrant/zend/workspace/everything/module/Album/tests/AlbumTest/Controller/IndexControllerTest.php" line="22" assertions="6" time="2.454946"/>
+      <testcase name="testAssertFailed" class="AlbumTest\Controller\IndexControllerTest" file="/vagrant/zend/workspace/everything/module/Album/tests/AlbumTest/Controller/IndexControllerTest.php" line="44" assertions="0" time="0.168579"/>
+    </testsuite>
+    <testsuite name="AlbumTest\Model\AlbumTest" file="/vagrant/zend/workspace/everything/module/Album/tests/AlbumTest/Model/AlbumTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.016161">
+      <testcase name="testAlbumInitialState" class="AlbumTest\Model\AlbumTest" file="/vagrant/zend/workspace/everything/module/Album/tests/AlbumTest/Model/AlbumTest.php" line="8" assertions="1" time="0.016161"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Checklist Test Suite" tests="2" assertions="5" failures="0" errors="0" time="2.838037">
+    <testsuite name="ChecklistTest\Controller\TaskControllerTest" file="/vagrant/zend/workspace/everything/module/Checklist/tests/ChecklistTest/Controller/TaskControllerTest.php" tests="1" assertions="4" failures="0" errors="0" time="2.824105">
+      <testcase name="testIndexActionCanBeAccessed" class="ChecklistTest\Controller\TaskControllerTest" file="/vagrant/zend/workspace/everything/module/Checklist/tests/ChecklistTest/Controller/TaskControllerTest.php" line="23" assertions="4" time="2.824105"/>
+    </testsuite>
+    <testsuite name="ChecklistTest\Model\TaskEntityTest" file="/vagrant/zend/workspace/everything/module/Checklist/tests/ChecklistTest/Model/TaskEntityTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.013932">
+      <testcase name="testTaskEntityInitialTest" class="ChecklistTest\Model\TaskEntityTest" file="/vagrant/zend/workspace/everything/module/Checklist/tests/ChecklistTest/Model/TaskEntityTest.php" line="7" assertions="1" time="0.013932"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
