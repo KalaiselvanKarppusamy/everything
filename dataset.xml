@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<dataset>
+    <album id="1" artist="test_artist1" title="test_title1"/>
+    <album id="2" artist="test_artist2" title="test_title2"/>
+    <task_item id="1" title="test_title" completed="1" created="0000-00-00 00:00:00"/>
+</dataset>

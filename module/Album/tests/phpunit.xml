@@ -18,4 +18,13 @@
 		<log type="coverage-clover" target="../../../build/logs/clover.xml"/>
 		<log type="junit" target="../../../build/logs/tests/album-junit.xml" logIncompleteSkipped="false"/>
 	</logging>
+
+    <php>
+        <var name="DB_DRIVER" value="mysql" />
+        <var name="DB_USER" value="root" />
+        <var name="DB_PASSWORD" value="root" />
+        <var name="DB_HOST" value="localhost" />
+        <var name="DB_DATABASE" value="integration" />
+    </php>
+
 </phpunit>
